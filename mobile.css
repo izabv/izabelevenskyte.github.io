@@ -1,0 +1,121 @@
+.plate {
+  height: 80px;
+  width: 80px;
+  z-index: 100;
+  
+}
+.burger {
+  filter: url(#gooeyness);
+  /* right: 30vw */
+
+}
+.x {
+  transform: scale(0);
+  transition: transform 400ms;
+  /* right:10%; */
+
+
+}
+.line {
+  fill: none;
+  stroke: rgb(255, 255, 255);
+  stroke-width: 6px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transform-origin: 50%;
+  transition: stroke-dasharray 500ms 200ms, stroke-dashoffset 500ms 200ms, transform 500ms 200ms;
+}
+.x .line {
+  stroke-width: 5.5px;
+}
+
+.plate4 .x {
+  transition: transform 400ms;
+}
+.plate4 .line {
+  transform-origin: 50%;
+  transition: transform 400ms 100ms;
+}
+.active.plate4 .line {
+  transition: transform 400ms;
+}
+.active.plate4 .line1 {
+  transform: translateX(18px) translateY(-3px) rotate(-45deg) scale(.7);
+}
+.active.plate4 .line2 {
+  transform: translateX(-18px) translateY(-3px) rotate(45deg) scale(.7);
+}
+.active.plate4 .line3 {
+  transform: translateY(0px) rotate(45deg) scale(.7);
+}
+.active.plate4 .line4 {
+  transform: translateY(0px) rotate(-45deg) scale(.7);
+}
+.active.plate4 .line5 {
+  transform: translateX(18px) translateY(3px) rotate(45deg) scale(.7);
+  
+}
+.active.plate4 .line6 {
+  transform: translateX(-18px) translateY(3px) rotate(-45deg) scale(.7);
+  
+  
+}
+
+.active.plate4  .line{
+  stroke: rgb(0, 0, 0);
+  position: fixed;
+}
+
+
+.active.plate4 .x {
+  transition: transform 400ms 100ms;
+  transform: scale(1);
+  position: fixed;
+}
+svg {
+  height: 80px;
+  position: absolute;
+  width: 80px;
+}
+.menu-circle {
+  display: none;
+  background-color: white;
+  position: absolute;
+  /* top:4%;
+  right:8%; */
+  width: 100vw; height: 100vh; border-radius: 0px;top:0; right:0; bottom:0;
+  animation: menu 1s ease;
+  z-index: 99;
+  position: fixed;
+}
+@keyframes menu {
+  0%{width: 1px; height:1px;border-radius: 1000px; top:0; right:0}
+  50%{width: 300px; height: 300px;top:0; right:0}
+  100% {width: 100vw; height: 100vh; border-radius: 0px;top:0; right:0; bottom:0}
+}
+.lol {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0 auto;
+  position: fixed;
+}
+.lol div{
+  cursor: pointer;
+  font-family: 'Franklin Gothic Heavy', 'Arial Narrow', Arial, sans-serif;
+  color: black;
+  font-size: 45px;
+  margin: 50px 0 0 20PX; 
+  border: solid black;
+  border-style: dotted;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 2px 3px 0px black;
+  transition: 0.2s ease;
+
+}
+.lol div:hover {
+  background-color: black;
+  color: white;
+}
