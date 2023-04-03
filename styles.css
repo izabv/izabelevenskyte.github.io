@@ -9,6 +9,11 @@ font-family: 'Rubik', sans-serif;
 overflow-x: hidden;
 
 }
+
+@font-face {
+  font-family: 'Rubik', sans-serif;
+   font-family: 'Franklin Gothic Heavy', arial;
+}
 @media screen and (max-width:500px) {
   .hide {
     display: none;
